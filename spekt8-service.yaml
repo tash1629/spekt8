@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spekt8
+spec:
+  type: ClusterIP
+  selector:
+    component: spekt8
+  ports:
+    - name: rest
+      protocol: TCP
+      port: 3002
+      targetPort: 3000
